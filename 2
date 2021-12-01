@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+int main()
+{ 
+	setlocale(LC_ALL, "Rus"); 
+	int sum = 0, number;
+	string str;
+	cin >> str;
+	stringstream s(str); //считывает данные со строк
+	while (s >> number) { sum += number; }
+	cout << "сумма = " << sum;
+}
