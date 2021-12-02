@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{ 
+    const int n = 100; //максимальное количество символов в строке
+    char fio[n];
+    char* k = fio;
+    cin.getline(fio, 100);
+    while (*k != ' ') k++;
+    cout << *++k << '.';
+    while (*k != ' ') k++;
+    cout << *++k << ". ";
+    k = fio;
+    while (*k != ' ') cout << *k++;
+}
