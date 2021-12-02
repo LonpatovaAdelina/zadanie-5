@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+int main()
+{ 
+    const int n = 100;
+    const int ns = 15;
+    int k = 0;
+    char str[n];
+    char sl[ns];
+    cin.getline(str, sizeof(str));
+    cin.getline(sl, sizeof(sl));
+    const int k = 0;
+    const int len = strlen(sl);
+    for (const char* s = str; (s = strstr(s, sl)) != nullptr; s += len)
+    {
+        if (not (s != str && isalnum((unsigned char)*(s - 1)) || isalnum((unsigned char)*(s + len))))
+        {k++;}
+    }
+    cout << k;
+}
