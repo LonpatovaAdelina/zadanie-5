@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	char s2[1234];
+	char s;
+	cin.get(s);
+	int size = 0;
+	bool check = true;
+	while (s != '\n')
+	{
+		s2[size] = s;
+		size += 1;
+		cin.get(s);
+	}
+	for (int i = 0; i < size / 2; i++)
+	{
+		if (s2[i] != s2[size - i - 1])
+		{
+			check = false;
+			break;
+		}
+	}
+	if (check)
+		cout<< "слово является палиндромом";
+	else 
+	cout << "слово не является палиндромом";
+}
